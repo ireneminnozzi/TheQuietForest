@@ -1,8 +1,15 @@
 plugins {
-    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
 }
 
-group = 'org.example'
+
+javafx{
+    version= "24.0.1"
+    modules = ['javafx.controls', 'javafx.media']
+}
+
+group = 'it.unicam.cs.mpgc.rpg130957'
 version = '1.0-SNAPSHOT'
 
 repositories {
@@ -13,8 +20,17 @@ dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation("com.google.code.gson:gson:2.10.1")
 }
 
 test {
     useJUnitPlatform()
+}
+
+application {
+    mainClass = 'it.unicam.cs.mpgc.rpg130957.app.MainFX'
+}
+
+tasks.named('run') {
+    standardInput = System.in
 }
