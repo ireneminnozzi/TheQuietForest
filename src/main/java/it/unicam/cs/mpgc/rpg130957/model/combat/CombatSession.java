@@ -15,13 +15,6 @@ import java.util.Objects;
 
 /**
  * Rappresenta una sessione di combattimento in corso tra la strega e un mostro.
- *
- * <p>A differenza del progetto di riferimento (che usava un ciclo automatico),
- * questa classe gestisce il combattimento turno per turno,
- * permettendo all'interfaccia grafica di attendere la scelta del giocatore.</p>
- *
- * <p>Incapsula lo stato del combattimento (storico, esito) e delega i calcoli
- * matematici al {@link CombatSystem}.</p>
  */
 public final class CombatSession {
 
@@ -39,11 +32,15 @@ public final class CombatSession {
      * @param combatSystem motore di calcolo per danni e probabilità
      */
     public CombatSession(Witch witch, Monster monster, CombatSystem combatSystem) {
-        this.witch = Objects.requireNonNull(witch, "Witch cannot be null");
-        this.monster = Objects.requireNonNull(monster, "Monster cannot be null");
-        this.combatSystem = Objects.requireNonNull(combatSystem, "CombatSystem cannot be null");
+        this.witch = Objects.requireNonNull(witch, "La strega non può essere nulla");
+        this.monster = Objects.requireNonNull(monster, "Il mostro non può essere nullo");
+        this.combatSystem = Objects.requireNonNull(combatSystem, "CombatSystem non può essere nullo");
         this.history = new ArrayList<>();
         this.ended = false;
+    }
+
+    public Monster getMonster() {
+        return monster;
     }
 
     /**
@@ -52,7 +49,7 @@ public final class CombatSession {
      * @param action azione scelta dalla strega
      * @param spell  incantesimo da lanciare (necessario solo se action è SPELL)
      * @param potion tipo di pozione da usare (necessario solo se action è POTION)
-     * @return descrizione testuale dell'esito del turno (per l'UI)
+     * @return descrizione testuale dell'esito del turno
      * @throws IllegalStateException    se il combattimento è già terminato
      * @throws IllegalArgumentException se l'azione richiede parametri mancanti o non validi
      */
@@ -112,7 +109,7 @@ public final class CombatSession {
             return turnReport.toString();
         }
 
-        // 3. Se la strega è fuggita con successo, il turno finisce qui e il mostro NON attacca.
+        // 3. Se la strega è fuggita con successo, il turno finisce qui e il mostro non attacca.
         if (playerSuccessfullyFled) {
             ended = true;
             return turnReport.toString();
@@ -135,13 +132,13 @@ public final class CombatSession {
 
     /**
      * Applica l'effetto di una pozione alla strega.
-     * Metodo di supporto per mantenere executeTurn pulito (Clean Code: Small Functions).
+     * Metodo di supporto per mantenere executeTurn pulito.
      */
     private void applyPotionEffect(Potion potion) {
         switch (potion.getType()) {
             case HEALTH -> witch.heal(potion.getType().getHealthRestore());
-            case MANA -> witch.recoverMana(potion.getType().getManaRestore());
-            case POWER -> witch.increasePower(potion.getType().getPowerBonus());
+            case MANA   -> witch.recoverMana(potion.getType().getManaRestore());
+            case POWER  -> witch.increasePower(potion.getType().getPowerBonus());
         }
     }
     private String processMonsterAttack() {
@@ -159,7 +156,7 @@ public final class CombatSession {
      */
     public CombatResult finalizeCombat() {
         if (!ended) {
-            throw new IllegalStateException("Combat is not ended yet");
+            throw new IllegalStateException("Il combattimento non è ancora finito");
         }
         boolean won = witch.isAlive() && monster.getHealth() == 0;
         boolean fled = !won && witch.isAlive(); // Se è viva ma non ha vinto, è fuggita

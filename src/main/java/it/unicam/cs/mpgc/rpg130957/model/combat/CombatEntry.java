@@ -16,13 +16,13 @@ public final class CombatEntry {
     /**
      * Crea una nuova voce del registro di combattimento.
      *
-     * @param description descrizione testuale dell'azione (es. "Strega lancia Fireball")
-     * @param damageDealt   danno inflitto dall'azione (0 se l'azione è di cura o fuga)
+     * @param description descrizione testuale dell'azione
+     * @param damageDealt danno inflitto dall'azione (0 se l'azione è di cura o fuga)
      */
     public CombatEntry(String description, int damageDealt) {
-        this.description = Objects.requireNonNull(description, "Description cannot be null");
+        this.description = Objects.requireNonNull(description, "La descrizione non può essere null");
         if (damageDealt < 0) {
-            throw new IllegalArgumentException("Damage dealt cannot be negative");
+            throw new IllegalArgumentException("I danni inflitti non possono essere negativi");
         }
         this.damageDealt = damageDealt;
     }

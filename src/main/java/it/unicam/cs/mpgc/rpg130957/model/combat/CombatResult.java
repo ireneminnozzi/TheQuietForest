@@ -27,7 +27,7 @@ public final class CombatResult {
     public CombatResult(boolean witchWon, boolean fled, List<CombatEntry> history) {
         this.witchWon = witchWon;
         this.fled = fled;
-        this.history = Collections.unmodifiableList(Objects.requireNonNull(history, "History cannot be null"));
+        this.history = Collections.unmodifiableList(Objects.requireNonNull(history, "La cronologia non può essere nulla"));
     }
 
     public boolean isWitchWon() {

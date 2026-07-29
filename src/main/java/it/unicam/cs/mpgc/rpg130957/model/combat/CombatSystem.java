@@ -11,9 +11,6 @@ import java.util.Objects;
  * <p>Questa classe è stateless (senza stato): non memorizza
  * informazioni sui combattimenti in corso. Si occupa esclusivamente di
  * calcolare i danni e le probabilità basandosi sul {@link GameRandom}.</p>
- *
- * <p>Questo design rispetta il principio di Singola Responsabilità (SRP):
- * il calcolo matematico è separato dalla gestione dello stato della partita.</p>
  */
 public final class CombatSystem {
 
@@ -26,7 +23,7 @@ public final class CombatSystem {
      * @throws NullPointerException se il random è null
      */
     public CombatSystem(GameRandom random) {
-        this.random = Objects.requireNonNull(random, "GameRandom cannot be null");
+        this.random = Objects.requireNonNull(random, "GameRandom non può essere nullo");
     }
 
     /**
@@ -47,7 +44,7 @@ public final class CombatSystem {
      * @return true se la fuga ha successo, false altrimenti
      */
     public boolean tryFlee() {
-        return random.nextInt(2) == 0; // 0 o 1 -> 50% di probabilità
+        return random.nextInt(2) == 0; // 50% di probabilità
     }
 
     /**
@@ -59,7 +56,7 @@ public final class CombatSystem {
      */
     public int calculateDamageFromRange(int min, int max) {
         if (min > max) {
-            throw new IllegalArgumentException("min cannot be greater than max");
+            throw new IllegalArgumentException("Il minimo non può essere più grande del massimo");
         }
         return random.nextInt(min, max + 1);
     }
