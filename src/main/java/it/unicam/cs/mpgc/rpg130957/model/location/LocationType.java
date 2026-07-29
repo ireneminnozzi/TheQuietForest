@@ -8,25 +8,20 @@ package it.unicam.cs.mpgc.rpg130957.model.location;
  */
 public enum LocationType {
 
-    WATERFALL("Cascate", "waterfall_icon.png"),
-    SWAMP("Palude", "swamp_icon.png"),
-    FOREST("Bosco", "forest_icon.png"),
-    CEMETERY("Cimitero", "cemetery_icon.png"),
-    HUT("Capanna", "hut_icon.png");
+    WATERFALL("Cascate"),
+    SWAMP("Palude"),
+    FOREST("Bosco"),
+    CEMETERY("Cimitero"),
+    HUT("Capanna");
 
     private final String displayName;
-    private final String iconPath;
 
-    LocationType(String displayName, String iconPath) {
+    LocationType(String displayName) {
         this.displayName = displayName;
-        this.iconPath = iconPath;
     }
 
     public String getDisplayName() {
         return displayName;
     }
 
-    public String getIconPath() {
-        return iconPath;
-    }
 }

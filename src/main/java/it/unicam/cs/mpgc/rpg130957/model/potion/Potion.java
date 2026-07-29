@@ -20,7 +20,7 @@ public final class Potion {
      * @throws NullPointerException se il tipo è null
      */
     public Potion(PotionType type) {
-        this.type = Objects.requireNonNull(type, "Potion type cannot be null");
+        this.type = Objects.requireNonNull(type, "Il tipo della pozione non può essere null");
     }
 
     /**
