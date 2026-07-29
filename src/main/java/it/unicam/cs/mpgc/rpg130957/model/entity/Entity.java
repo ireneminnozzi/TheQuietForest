@@ -34,20 +34,11 @@ public abstract class Entity {
         this.health = health;
     }
 
-    /**
-     * Restituisce il nome visualizzato dell'entità.
-     *
-     * @return nome visualizzato
-     */
+
     public String getDisplayName() {
         return displayName;
     }
 
-    /**
-     * Restituisce la salute corrente dell'entità.
-     *
-     * @return salute corrente
-     */
     public int getHealth() {
         return health;
     }
@@ -62,7 +53,7 @@ public abstract class Entity {
      */
     public void takeDamage(int damage) {
         if (damage < 0) {
-            throw new IllegalArgumentException("Damage cannot be negative");
+            throw new IllegalArgumentException("Il danno non può essere negativo");
         }
         health = Math.max(0, health - damage);
     }
@@ -77,41 +68,26 @@ public abstract class Entity {
     }
 
     /**
-     * Restituisce il danno minimo che l'entità può infliggere.
+     * Restituisce il danno minimo/massimo che l'entità può infliggere.
      *
-     * @return danno minimo
+     * @return danno minimo/massimo
      */
     public abstract int getMinDamage();
 
-    /**
-     * Restituisce il danno massimo che l'entità può infliggere.
-     *
-     * @return danno massimo
-     */
     public abstract int getMaxDamage();
-
-    /**
-     * Incrementa la salute dell'entità.
-     *
-     * @param amount quantità da aggiungere
-     */
-    protected void increaseHealth(int amount) {
-        if (amount <= 0) return;
-        this.health += amount;
-    }
 
     /**
      * Imposta direttamente la salute dell'entità.
      *
      * <p>Utilizzato principalmente durante operazioni di ripristino
-     * dello stato di gioco (es. riposo nella capanna).</p>
+     * dello stato di gioco. </p>
      *
      * @param health nuova salute
      * @throws IllegalArgumentException se la salute è negativa
      */
     protected void setHealth(int health) {
         if (health < 0) {
-            throw new IllegalArgumentException("Health cannot be negative");
+            throw new IllegalArgumentException("La salute non può essere negativa");
         }
         this.health = health;
     }

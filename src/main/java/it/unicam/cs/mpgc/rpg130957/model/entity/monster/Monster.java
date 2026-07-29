@@ -34,7 +34,7 @@ public abstract sealed class Monster extends Entity
      * @param minDamage   danno minimo infliggibile
      * @param maxDamage   danno massimo infliggibile
      * @param description descrizione testuale del mostro
-     * @throws IllegalArgumentException se i danni sono negativi o min &gt; max
+     * @throws IllegalArgumentException se i danni sono negativi o min > max
      */
     protected Monster(String name, int health, int minDamage, int maxDamage, String description) {
         super(name, health);

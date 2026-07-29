@@ -15,26 +15,26 @@ import java.util.Objects;
  * <p>La strega possiede:</p>
  * <ul>
  *   <li>Punti vita e punti mana</li>
- *   <li>Un bonus di danno base (aumentabile con pozioni di potenza)</li>
+ *   <li>Un bonus di danno base</li>
  *   <li>un inventario di pozioni</li>
  *   <li>Una lista di incantesimi conosciuti</li>
  * </ul>
  *
  * <p>Il danno inflitto dalla strega in un attacco base è calcolato come
  * {@code baseDamage + bonusPotenza}, dove {@code baseDamage} è un valore
- * fisso di progetto (5-10) e {@code bonusPotenza} aumenta permanentemente
+ * fisso (5-10) e {@code bonusPotenza} aumenta permanentemente
  * ogni volta che viene bevuta una pozione di potenza.</p>
  */
 public final class Witch extends Entity {
 
-    /** Danno base minimo della strega (senza bonus). */
+    /** Danno base minimo della strega. */
     private static final int BASE_MIN_DAMAGE = 5;
-    /** Danno base massimo della strega (senza bonus). */
+    /** Danno base massimo della strega. */
     private static final int BASE_MAX_DAMAGE = 10;
 
-    /** Salute massima della strega. */
+    /** Salute massima. */
     private static final int MAX_HEALTH = 100;
-    /** Mana massimo della strega. */
+    /** Mana massimo. */
     private static final int MAX_MANA = 50;
 
     private int mana;
@@ -88,10 +88,10 @@ public final class Witch extends Entity {
      */
     public void consumeMana(int amount) {
         if (amount < 0) {
-            throw new IllegalArgumentException("Mana amount cannot be negative");
+            throw new IllegalArgumentException("La quantità di mana non può essere negativa");
         }
         if (amount > mana) {
-            throw new IllegalStateException("Not enough mana");
+            throw new IllegalStateException("Mana insufficiente");
         }
         mana -= amount;
     }
@@ -120,7 +120,7 @@ public final class Witch extends Entity {
     }
 
     /**
-     * Ripristina completamente salute e mana (effetto del riposo nella capanna).
+     * Ripristina completamente salute e mana (riposo nella capanna).
      */
     public void rest() {
         setHealth(MAX_HEALTH);
@@ -169,7 +169,7 @@ public final class Witch extends Entity {
                 .filter(p -> p.getType() == type)
                 .findFirst()
                 .orElseThrow(() -> new IllegalStateException(
-                        "No potion of type " + type + " in inventory"));
+                        "Nessuna pozione di tipo " + type + " nell'inventario"));
         inventory.remove(found);
         return found;
     }
@@ -200,7 +200,7 @@ public final class Witch extends Entity {
      * @throws NullPointerException se l'incantesimo è null
      */
     public void learnSpell(Spell spell) {
-        Objects.requireNonNull(spell, "Spell cannot be null");
+        Objects.requireNonNull(spell, "L'incantesimo non può essere nullo");
         if (!knownSpells.contains(spell)) {
             knownSpells.add(spell);
         }
@@ -253,7 +253,7 @@ public final class Witch extends Entity {
      */
     public void restoreMana(int mana) {
         if (mana < 0 || mana > MAX_MANA) {
-            throw new IllegalArgumentException("Invalid mana value: " + mana);
+            throw new IllegalArgumentException("Valore mana errato: " + mana);
         }
         this.mana = mana;
     }
@@ -266,7 +266,7 @@ public final class Witch extends Entity {
      */
     public void restorePowerBonus(int powerBonus) {
         if (powerBonus < 0) {
-            throw new IllegalArgumentException("Power bonus cannot be negative");
+            throw new IllegalArgumentException("Il bonus non può essere negativo");
         }
         this.powerBonus = powerBonus;
     }

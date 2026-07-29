@@ -4,23 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b514e8f4-e30f-4a95-99cc-b139630bd357" name="Changes" comment="UPDATE:">
+    <list default="true" id="b514e8f4-e30f-4a95-99cc-b139630bd357" name="Changes" comment="UPDATE:&#10;creazione della location">
       <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/game/GameEngine.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/game/GameEvent.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/game/GameEventType.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/game/GameSession.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/game/GameState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/location/ForestMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/location/Location.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/location/LocationType.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/potion/PotionFactory.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/spell/Spell.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/spell/SpellType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/combat/CombatEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/combat/CombatEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/combat/CombatResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/combat/CombatResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/combat/CombatSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/combat/CombatSession.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/combat/CombatSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/combat/CombatSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/entity/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/entity/Witch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/entity/Witch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/entity/monster/Dragon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/entity/monster/Dragon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/entity/monster/Goblin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/entity/monster/Goblin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/entity/monster/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/entity/monster/Monster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/entity/monster/Spirit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/entity/monster/Spirit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/entity/monster/Troll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/entity/monster/Troll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/game/GameRandom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/game/GameRandom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/location/LocationType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/location/LocationType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/potion/Potion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/potion/Potion.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +122,7 @@
       <option name="presentableId" value="Default" />
       <updated>1784921501840</updated>
       <workItem from="1784921505966" duration="25772000" />
-      <workItem from="1785328954375" duration="1257000" />
+      <workItem from="1785328954375" duration="14903000" />
     </task>
     <task id="LOCAL-00001" summary="creazione delle entità">
       <option name="closed" value="true" />
@@ -157,7 +164,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785171760904</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="UPDATE:&#10;creazione della location">
+      <option name="closed" value="true" />
+      <created>1785330362963</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1785330362964</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +184,7 @@
     <MESSAGE value="creazione prime pozioni" />
     <MESSAGE value="UPDATE:&#10;aggiunta prime classi Combat" />
     <MESSAGE value="workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace" />
+    <MESSAGE value="UPDATE:&#10;creazione della location" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE:&#10;creazione della location" />
   </component>
 </project>

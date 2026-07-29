@@ -13,11 +13,9 @@ package it.unicam.cs.mpgc.rpg130957.model.entity.monster;
  */
 public final class Spirit extends Monster {
 
-    /**
-     * Crea uno Spirito con statistiche predefinite.
-     */
     public Spirit() {
         super("Spirito", 50, 8, 18,
-                "Uno spirito inquieto che vaga tra le lapidi del cimitero.");
+                "Uno spirito inquieto che vaga tra le lapidi del cimitero. " +
+                        "\nNon ha forma fisica, ma il suo tocco gelido prosciuga le energie vitali.");
     }
 }

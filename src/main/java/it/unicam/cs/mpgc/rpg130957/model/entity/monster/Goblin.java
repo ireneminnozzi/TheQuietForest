@@ -14,11 +14,9 @@ package it.unicam.cs.mpgc.rpg130957.model.entity.monster;
  */
 public final class Goblin extends Monster {
 
-    /**
-     * Crea un Goblin con statistiche predefinite.
-     */
     public Goblin() {
         super("Goblin", 30, 5, 10,
-                "Un piccolo goblin dispettoso che vive vicino alle cascate.");
+                "Un piccolo goblin dispettoso che vive vicino alle cascate. " +
+                        "\nAttacca in gruppo ma è debole individualmente.");
     }
 }

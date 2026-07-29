@@ -2,7 +2,7 @@
 package it.unicam.cs.mpgc.rpg130957.model.entity.monster;
 
 /**
- * Rappresenta un Drago, il signore del bosco.
+ * Rappresenta un Drago, il mostro del bosco.
  *
  * <p>Il Drago è il nemico più potente del gioco, un boss finale
  * che richiede strategia e pozioni per essere sconfitto.</p>
@@ -14,11 +14,9 @@ package it.unicam.cs.mpgc.rpg130957.model.entity.monster;
  */
 public final class Dragon extends Monster {
 
-    /**
-     * Crea un Drago con statistiche predefinite.
-     */
     public Dragon() {
         super("Drago", 100, 15, 30,
-                "Un drago antico che domina il cuore del bosco.");
+                "Un drago antico che domina il cuore del bosco. " +
+                        "\nLe sue fiamme possono incenerire un esercito intero.");
     }
 }
