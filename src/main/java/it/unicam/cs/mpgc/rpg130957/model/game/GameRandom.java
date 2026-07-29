@@ -10,13 +10,11 @@ import java.util.Random;
  * garantendo la riproducibilità della generazione degli eventi casuali
  * (danni, pozioni, combattimenti).</p>
  *
- * <p>L'uso di un seed deterministico è fondamentale per:</p>
- * <ul>
- *   <li>Riprodurre esattamente una partita durante i test</li>
- *   <li>Salvare e ricaricare lo stato del gioco in modo coerente</li>
- * </ul>
  */
 public final class GameRandom {
+//  L'uso di un seed deterministico è fondamentale per:
+// -Riprodurre esattamente una partita durante i test
+// -Salvare e ricaricare lo stato del gioco in modo coerente
 
     private final Random random;
     private final long seed;
