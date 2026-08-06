@@ -270,4 +270,17 @@ public final class Witch extends Entity {
         }
         this.powerBonus = powerBonus;
     }
+
+    /**
+     * Imposta direttamente la salute per il caricamento di una partita salvata.
+     *
+     * @param health valore della salute da impostare
+     * @throws IllegalArgumentException se il valore non è compreso tra 0 e 100
+     */
+    public void restoreHealth(int health) {
+        if (health < 0 || health > 100) {
+            throw new IllegalArgumentException("Invalid health value: " + health);
+        }
+        setHealth(health);
+    }
 }

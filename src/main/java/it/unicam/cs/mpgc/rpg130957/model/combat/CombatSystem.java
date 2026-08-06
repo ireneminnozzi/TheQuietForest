@@ -60,4 +60,20 @@ public final class CombatSystem {
         }
         return random.nextInt(min, max + 1);
     }
+
+
+
+    /**
+     * Restituisce il generatore casuale utilizzato dal sistema di combattimento.
+     *
+     * <p>Utilizzato principalmente per estrarre il seed durante
+     * le operazioni di salvataggio della partita.</p>
+     *
+     * @return istanza del GameRandom
+     */
+    public GameRandom getRandom() {
+        return random;
+    }
+
+
 }

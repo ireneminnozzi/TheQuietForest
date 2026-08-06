@@ -8,11 +8,14 @@ import it.unicam.cs.mpgc.rpg130957.model.entity.Witch;
 import it.unicam.cs.mpgc.rpg130957.model.location.ForestMap;
 import it.unicam.cs.mpgc.rpg130957.model.location.Location;
 import it.unicam.cs.mpgc.rpg130957.model.location.LocationType;
+import it.unicam.cs.mpgc.rpg130957.model.persistence.SaveData;
 import it.unicam.cs.mpgc.rpg130957.model.potion.Potion;
 import it.unicam.cs.mpgc.rpg130957.model.potion.PotionFactory;
 import it.unicam.cs.mpgc.rpg130957.model.potion.PotionType;
 import it.unicam.cs.mpgc.rpg130957.model.spell.Spell;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -30,6 +33,7 @@ public final class GameEngine {
     private final ForestMap map;
     private final CombatSystem combatSystem;
     private final PotionFactory potionFactory;
+    private final GameRandom random;
 
     private CombatSession currentSession;
     private GameState gameState;
@@ -42,11 +46,12 @@ public final class GameEngine {
      * @param combatSystem il sistema di calcolo del combattimento
      * @param potionFactory la factory per generare le ricompense
      */
-    public GameEngine(Witch witch, ForestMap map, CombatSystem combatSystem, PotionFactory potionFactory) {
+    public GameEngine(Witch witch, ForestMap map, CombatSystem combatSystem, PotionFactory potionFactory, GameRandom random) {
         this.witch = Objects.requireNonNull(witch);
         this.map = Objects.requireNonNull(map);
         this.combatSystem = Objects.requireNonNull(combatSystem);
         this.potionFactory = Objects.requireNonNull(potionFactory);
+        this.random = Objects.requireNonNull(random);
         this.gameState = GameState.RUNNING;
     }
 
@@ -202,5 +207,51 @@ public final class GameEngine {
      */
     public CombatSession getCurrentSession() {
         return currentSession;
+    }
+
+    /**
+     * Ripristina lo stato della partita (utile per il caricamento).
+     */
+    public void restoreGameState(GameState state) {
+        this.gameState = state;
+    }
+
+    /**
+     * Estrae i dati correnti per creare un oggetto SaveData.
+     */
+    public SaveData extractSaveData() {
+        List<String> potions = new ArrayList<>();
+        for (Potion p : witch.getInventory()) {
+            potions.add(p.getType().name());
+        }
+
+        List<String> defeated = new ArrayList<>();
+        for (LocationType type : LocationType.values()) {
+            if (type != LocationType.HUT && map.getLocation(type).isMonsterDefeated()) {
+                defeated.add(type.name());
+            }
+        }
+
+        return new SaveData(
+                combatSystem.getRandom().getSeed(), // *Nota: aggiungi getSeed() a CombatSystem o GameRandom
+                witch.getHealth(),
+                witch.getMana(),
+                witch.getPowerBonus(),
+                potions,
+                defeated,
+                gameState.name()
+        );
+    }
+
+    /**
+     * Restituisce il generatore casuale utilizzato dal sistema.
+     *
+     * <p>Utilizzato principalmente per estrarre il seed durante
+     * le operazioni di salvataggio della partita.</p>
+     *
+     * @return istanza del GameRandom
+     */
+    public GameRandom getRandom() {
+        return random;
     }
 }

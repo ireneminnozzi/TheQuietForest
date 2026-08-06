@@ -84,4 +84,5 @@ public final class GameRandom {
     public int hashCode() {
         return Objects.hash(seed);
     }
+
 }
