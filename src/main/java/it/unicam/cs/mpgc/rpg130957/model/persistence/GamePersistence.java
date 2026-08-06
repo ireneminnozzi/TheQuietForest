@@ -21,11 +21,11 @@ public class GamePersistence {
     /**
      * Crea un nuovo gestore di persistenza.
      *
-     * @param filePath percorso del file di salvataggio (es. "savegame.json")
+     * @param filePath percorso del file di salvataggio
      */
     public GamePersistence(String filePath) {
         this.filePath = filePath;
-        // setPrettyPrinting rende il JSON leggibile dall'umano (utile per debug)
+        // setPrettyPrinting rende il JSON leggibile da noi
         this.gson = new GsonBuilder().setPrettyPrinting().create();
     }
 

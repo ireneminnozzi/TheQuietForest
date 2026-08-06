@@ -50,9 +50,9 @@ public class GameFactory {
      * @return GameEngine ripristinato
      */
     public GameEngine loadGame(SaveData data) {
-        GameRandom random = new GameRandom(data.getSeed());
-        Witch witch = restoreWitch(data);
-        ForestMap map = restoreMap(data);
+        GameRandom random = new GameRandom(data.getSeed()); //ricrea random
+        Witch witch = restoreWitch(data); //ricrea strega e valori salvati
+        ForestMap map = restoreMap(data); //ricrea mappa e location sconfitte
         CombatSystem combatSystem = new CombatSystem(random);
         PotionFactory potionFactory = new PotionFactory(random);
 

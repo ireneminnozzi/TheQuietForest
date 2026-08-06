@@ -220,18 +220,19 @@ public final class GameEngine {
      * Estrae i dati correnti per creare un oggetto SaveData.
      */
     public SaveData extractSaveData() {
+        // estrae le pozioni dall'inventario
         List<String> potions = new ArrayList<>();
         for (Potion p : witch.getInventory()) {
             potions.add(p.getType().name());
         }
-
+        // estrae le location sconfitte
         List<String> defeated = new ArrayList<>();
         for (LocationType type : LocationType.values()) {
             if (type != LocationType.HUT && map.getLocation(type).isMonsterDefeated()) {
                 defeated.add(type.name());
             }
         }
-
+        // crea e ritorna il SaveData
         return new SaveData(
                 combatSystem.getRandom().getSeed(), // *Nota: aggiungi getSeed() a CombatSystem o GameRandom
                 witch.getHealth(),
