@@ -1,27 +1,37 @@
-import it.unicam.cs.mpgc.rpg130957.model.game.GameEngine;
-import it.unicam.cs.mpgc.rpg130957.model.game.GameFactory;
-import it.unicam.cs.mpgc.rpg130957.model.persistence.GamePersistence;
-import it.unicam.cs.mpgc.rpg130957.model.persistence.SaveData;
+package it.unicam.cs.mpgc.rpg130957;
 
-    public static void main(String[] args) throws Exception {
-        GameFactory factory = new GameFactory();
-        GamePersistence persistence = new GamePersistence("savegame.json");
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-        // 1. Crea nuova partita
-        GameEngine engine = factory.createNewGame();
-        System.out.println("Nuova partita creata. Seed: " + engine.getRandom().getSeed());
+import java.io.IOException;
 
-        // 2. Simula un'azione (es. la strega usa mana)
-        engine.getWitch().consumeMana(10);
 
-        // 3. Salva
-        persistence.save(engine.extractSaveData());
-        System.out.println("Partita salvata!");
+public class Main extends Application {
 
-        // 4. Carica
-        SaveData data = persistence.load();
-        GameEngine loadedEngine = factory.loadGame(data);
+    @Override
+    public void start(Stage primaryStage) {
+        try {
+            // Carica il file FXML del menu iniziale
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/menu.fxml"));
+            Parent root = loader.load();
 
-        System.out.println("Partita caricata. Mana strega: " + loadedEngine.getWitch().getMana());
-        // Dovrebbe stampare 40 (50 iniziali - 10 consumati)
+            // Crea la scena e la imposta sullo Stage (la finestra)
+            Scene scene = new Scene(root, 800, 600);
+            primaryStage.setTitle("The Quiet Forest");
+            primaryStage.setScene(scene);
+            primaryStage.setResizable(false); // Blocca il ridimensionamento per mantenere le proporzioni
+            primaryStage.show();
+
+        } catch (IOException e) {
+            System.err.println("Errore nel caricamento dell'interfaccia: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
