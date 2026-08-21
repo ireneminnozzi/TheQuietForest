@@ -32,4 +32,9 @@ public enum PotionType {
     public int getManaRestore() { return manaRestore; }
     public int getPowerBonus() { return powerBonus; }
     public String getDisplayName() { return displayName; }
+
+    @Override
+    public String toString() {
+        return getDisplayName();
+    }
 }

@@ -5,7 +5,8 @@ package it.unicam.cs.mpgc.rpg130957.model.spell;
  */
 public enum SpellType implements Spell {
 // Ho scelto di mantenere lo spelltype enum privilegiando kiss e dry perche gli incantesimi hanno comportamenti simili.
-// Se dovessi aggiungere incantesimi con effetti diversi (curare, buff, debuff), userei classi separate.
+// Se dovessi aggiungere incantesimi con effetti diversi, userei classi separate.
+
     LANCIA_BLU("Lancia Blu", 10, 10, 15),
     FIAMMA_ARCANA("Fiamma Arcana", 25, 20, 30),
     FIORE_LUNARE("Fiore Lunare", 5, 5, 8);
@@ -40,5 +41,10 @@ public enum SpellType implements Spell {
     @Override
     public int getMaxDamage() {
         return maxDamage;
+    }
+
+    @Override
+    public String toString() {
+        return getName();
     }
 }
