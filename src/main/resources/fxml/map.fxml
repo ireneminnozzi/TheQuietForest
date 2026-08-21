@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unicam.cs.mpgc.rpg130957.controller.MapController">
+    <children>
+        <!-- SFONDO DELLA MAPPA -->
+        <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="false">
+            <image>
+                <Image url="@/img/map_bosco.png" />
+            </image>
+        </ImageView>
+
+        <!-- LABEL PER I MESSAGGI DI STATO (in alto al centro) -->
+        <Label fx:id="messageLabel" alignment="CENTER" layoutX="150.0" layoutY="20.0" prefHeight="40.0" prefWidth="500.0" text="Scegli una destinazione..." textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+        </Label>
+
+        <!-- 5 BOTTONI DELLE LOCATION -->
+        <!-- Cascate (Top-Left) -->
+        <Button fx:id="btnWaterfall" layoutX="50.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleWaterfall" prefWidth="180.0" prefHeight="50.0" text="Cascate" style="-fx-font-size: 16px;" />
+
+        <!-- Palude (Top-Right) -->
+        <Button fx:id="btnSwamp" layoutX="600.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleSwamp" prefWidth="180.0" prefHeight="50.0" text="Palude" style="-fx-font-size: 16px;" />
+
+        <!-- Capanna (Center) -->
+        <Button fx:id="btnHut" layoutX="350.0" layoutY="300.0" mnemonicParsing="false" onAction="#handleHut" prefWidth="200.0" prefHeight="60.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px;" text="Capanna (Riposo)" />
+
+        <!-- Bosco (Bottom-Left) -->
+        <Button fx:id="btnForest" layoutX="50.0" layoutY="450.0" mnemonicParsing="false" onAction="#handleForest" prefWidth="180.0" prefHeight="50.0" text="Bosco" style="-fx-font-size: 16px;" />
+
+        <!-- Cimitero (Bottom-Right) -->
+        <Button fx:id="btnCemetery" layoutX="600.0" layoutY="450.0" mnemonicParsing="false" onAction="#handleCemetery" prefWidth="180.0" prefHeight="50.0" text="Cimitero" style="-fx-font-size: 16px;" />
+
+        <!-- Bottone per tornare al menu -->
+        <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleBackToMenu" prefWidth="100.0" prefHeight="40.0" text="&lt;- Menu" style="-fx-font-size: 14px;" />
+    </children>
+</AnchorPane>

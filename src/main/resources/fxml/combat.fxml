@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unicam.cs.mpgc.rpg130957.controller.CombatController" style="-fx-background-color: #2b2b2b; -fx-padding: 30;">
+    <children>
+
+        <!-- STATISTICHE COMBATTENTI -->
+        <HBox alignment="CENTER" spacing="80.0">
+            <children>
+                <!-- Mostro -->
+                <VBox alignment="CENTER" spacing="10.0" style="-fx-background-color: #4a4a4a; -fx-padding: 20; -fx-background-radius: 10;">
+                    <Label fx:id="monsterNameLabel" text="Mostro" textFill="#ff6b6b">
+                        <font><Font name="System Bold" size="22.0" /></font>
+                    </Label>
+                    <Label fx:id="monsterHpLabel" text="HP: 0/0" textFill="WHITE">
+                        <font><Font size="16.0" /></font>
+                    </Label>
+                </VBox>
+
+                <!-- Strega -->
+                <VBox alignment="CENTER" spacing="10.0" style="-fx-background-color: #4a4a4a; -fx-padding: 20; -fx-background-radius: 10;">
+                    <Label text="Strega" textFill="#6bff6b">
+                        <font><Font name="System Bold" size="22.0" /></font>
+                    </Label>
+                    <Label fx:id="witchHpLabel" text="HP: 0/0" textFill="WHITE">
+                        <font><Font size="16.0" /></font>
+                    </Label>
+                    <Label fx:id="witchManaLabel" text="Mana: 0/0" textFill="#6b9fff">
+                        <font><Font size="16.0" /></font>
+                    </Label>
+                </VBox>
+            </children>
+        </HBox>
+
+        <!-- LOG DEL COMBATTIMENTO -->
+        <TextArea fx:id="combatLog" editable="false" prefHeight="180.0" prefWidth="600.0" wrapText="true" style="-fx-control-inner-background: #1e1e1e; -fx-text-fill: #e0e0e0; -fx-font-size: 14px;" />
+
+        <!-- PULSANTI E MENU A TENDINA -->
+        <HBox alignment="CENTER" spacing="15.0">
+            <Button fx:id="btnAttack" mnemonicParsing="false" onAction="#handleAttack" prefWidth="130.0" text="Attacco Base" />
+
+            <ComboBox fx:id="spellCombo" prefWidth="160.0" promptText="Scegli Incantesimo" />
+            <Button fx:id="btnSpell" mnemonicParsing="false" onAction="#handleSpell" prefWidth="160.0" text="Lancia Incantesimo" />
+
+            <ComboBox fx:id="potionCombo" prefWidth="160.0" promptText="Scegli Pozione" />
+            <Button fx:id="btnPotion" mnemonicParsing="false" onAction="#handlePotion" prefWidth="130.0" text="Usa Pozione" />
+
+            <Button fx:id="btnFlee" mnemonicParsing="false" onAction="#handleFlee" prefWidth="100.0" style="-fx-background-color: #ff9900; -fx-text-fill: white; -fx-font-weight: bold;" text="Fuggi" />
+        </HBox>
+    </children>
+</VBox>
