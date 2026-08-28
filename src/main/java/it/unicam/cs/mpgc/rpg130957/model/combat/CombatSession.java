@@ -71,7 +71,6 @@ public final class CombatSession {
             }
             case SPELL -> {
                 Objects.requireNonNull(spell, "L'incantesimo è richiesto per l'azione SPELL");
-                if (!witch.knowsSpell(spell)) throw new IllegalArgumentException("La strega non conosce questo incantesimo");
                 if (!witch.canCast(spell)) throw new IllegalArgumentException("Mana insufficiente");
 
                 witch.consumeMana(spell.getManaCost());

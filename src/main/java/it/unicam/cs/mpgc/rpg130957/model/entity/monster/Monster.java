@@ -9,7 +9,6 @@ import it.unicam.cs.mpgc.rpg130957.model.entity.Entity;
  * <ul>
  *   <li>Nome e salute (ereditati da Entity)</li>
  *   <li>Danno minimo e massimo infliggibile</li>
- *   <li>Una descrizione testuale</li>
  * </ul>
  *
  * <p>Questa è una sealed class: può essere estesa
@@ -24,7 +23,6 @@ public abstract sealed class Monster extends Entity
 
     private final int minDamage;
     private final int maxDamage;
-    private final String description;
 
     /**
      * Crea un nuovo mostro con valori di base per il combattimento.
@@ -33,10 +31,9 @@ public abstract sealed class Monster extends Entity
      * @param health      punti vita iniziali
      * @param minDamage   danno minimo infliggibile
      * @param maxDamage   danno massimo infliggibile
-     * @param description descrizione testuale del mostro
      * @throws IllegalArgumentException se i danni sono negativi o min > max
      */
-    protected Monster(String name, int health, int minDamage, int maxDamage, String description) {
+    protected Monster(String name, int health, int minDamage, int maxDamage) {
         super(name, health);
         if (minDamage < 0 || maxDamage < 0) {
             throw new IllegalArgumentException("Damage cannot be negative");
@@ -47,7 +44,6 @@ public abstract sealed class Monster extends Entity
         }
         this.minDamage = minDamage;
         this.maxDamage = maxDamage;
-        this.description = description;
     }
 
     @Override
@@ -60,12 +56,4 @@ public abstract sealed class Monster extends Entity
         return maxDamage;
     }
 
-    /**
-     * Restituisce la descrizione testuale del mostro.
-     *
-     * @return descrizione del mostro
-     */
-    public String getDescription() {
-        return description;
-    }
 }

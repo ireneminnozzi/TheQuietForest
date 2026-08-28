@@ -15,8 +15,6 @@ package it.unicam.cs.mpgc.rpg130957.model.entity.monster;
 public final class Dragon extends Monster {
 
     public Dragon() {
-        super("Drago", 100, 15, 30,
-                "Un drago antico che domina il cuore del bosco. " +
-                        "\nLe sue fiamme possono incenerire un esercito intero.");
+        super("Drago", 100, 15, 30);
     }
 }

@@ -1,9 +1,14 @@
 {
-  "seed": 1785828742522,
-  "witchHealth": 100,
+  "seed": 1787699788059,
+  "witchHealth": 13,
   "witchMana": 40,
   "powerBonus": 0,
-  "inventoryPotions": [],
-  "defeatedLocations": [],
+  "inventoryPotions": [
+    "HEALTH",
+    "HEALTH"
+  ],
+  "defeatedLocations": [
+    "SWAMP"
+  ],
   "gameState": "RUNNING"
 }

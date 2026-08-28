@@ -4,18 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b514e8f4-e30f-4a95-99cc-b139630bd357" name="Changes" comment="UPDATE:&#10;build, menu e controller terminati. &#10;inizio della grafica">
+    <list default="true" id="b514e8f4-e30f-4a95-99cc-b139630bd357" name="Changes" comment="UPDATE:&#10;aggiunta foto alla grafica">
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/SoundManager.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/controller/CombatController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/controller/DefeatController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/controller/MapController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/combat.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/map.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/map_bosco.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sound/audioGioco.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/controller/VictoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/navigation/SceneNavigator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/defeat.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/victory.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/savegame.json" beforeDir="false" afterPath="$PROJECT_DIR$/savegame.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/potion/PotionType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/potion/PotionType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/spell/SpellType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/spell/SpellType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/controller/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/combat/CombatSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/combat/CombatSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/entity/Witch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/entity/Witch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/entity/monster/Dragon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/entity/monster/Dragon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/entity/monster/Goblin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/entity/monster/Goblin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/entity/monster/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/entity/monster/Monster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/entity/monster/Spirit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/entity/monster/Spirit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/entity/monster/Troll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/entity/monster/Troll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/combat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/combat.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/map.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/map.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +41,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -68,41 +80,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.TheQuietForest [:Main.main()].executor": "Run",
-    "Gradle.TheQuietForest [:it.unicam.cs.mpgc.rpg130957.Main.main()].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/irene/IdeaProjects/TheQuietForest/src/main/resources/img",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "settings.sync",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TheQuietForest [:Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TheQuietForest [:it.unicam.cs.mpgc.rpg130957.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/irene/IdeaProjects/TheQuietForest/src/main/resources/img&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\irene\IdeaProjects\TheQuietForest\src\main\resources\img" />
       <recent name="C:\Users\irene\IdeaProjects\TheQuietForest\src\main\resources\sound" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\irene\IdeaProjects\TheQuietForest\src\main\resources\sound" />
+      <recent name="C:\Users\irene\IdeaProjects\TheQuietForest\src\main\resources\img" />
       <recent name="C:\Users\irene\IdeaProjects\TheQuietForest\src\main\resources\fxml" />
     </key>
   </component>
@@ -124,7 +139,8 @@
       <workItem from="1784921505966" duration="25772000" />
       <workItem from="1785328954375" duration="16686000" />
       <workItem from="1785826823538" duration="7274000" />
-      <workItem from="1787337238434" duration="3204000" />
+      <workItem from="1787337238434" duration="12292000" />
+      <workItem from="1787948200835" duration="3640000" />
     </task>
     <task id="LOCAL-00001" summary="creazione delle entità">
       <option name="closed" value="true" />
@@ -230,11 +246,46 @@
       <option name="project" value="LOCAL" />
       <updated>1787337972029</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="UPDATE:&#10;aggiornamento degli enum">
+      <option name="closed" value="true" />
+      <created>1787340903298</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1787340903298</updated>
+    </task>
+    <task id="LOCAL-00015" summary="UPDATE:&#10;supporti">
+      <option name="closed" value="true" />
+      <created>1787340936303</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1787340936303</updated>
+    </task>
+    <task id="LOCAL-00016" summary="UPDATE:&#10;aggiunta foto alla grafica">
+      <option name="closed" value="true" />
+      <created>1787948336485</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1787948336485</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="creazione delle entità" />
@@ -249,6 +300,9 @@
     <MESSAGE value="UPDATE:&#10;aggiornamento classi game" />
     <MESSAGE value="UPDATE:&#10;classi game aggiornate e persistenza terminata" />
     <MESSAGE value="UPDATE:&#10;build, menu e controller terminati. &#10;inizio della grafica" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE:&#10;build, menu e controller terminati. &#10;inizio della grafica" />
+    <MESSAGE value="UPDATE:&#10;aggiornamento degli enum" />
+    <MESSAGE value="UPDATE:&#10;supporti" />
+    <MESSAGE value="UPDATE:&#10;aggiunta foto alla grafica" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE:&#10;aggiunta foto alla grafica" />
   </component>
 </project>

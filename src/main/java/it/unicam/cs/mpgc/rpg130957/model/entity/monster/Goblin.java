@@ -15,8 +15,6 @@ package it.unicam.cs.mpgc.rpg130957.model.entity.monster;
 public final class Goblin extends Monster {
 
     public Goblin() {
-        super("Goblin", 30, 5, 10,
-                "Un piccolo goblin dispettoso che vive vicino alle cascate. " +
-                        "\nAttacca in gruppo ma è debole individualmente.");
-    }
+        super("Goblin", 30, 5, 1)
+;                }
 }

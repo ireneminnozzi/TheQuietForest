@@ -3,6 +3,7 @@ package it.unicam.cs.mpgc.rpg130957.model.entity;
 import it.unicam.cs.mpgc.rpg130957.model.potion.Potion;
 import it.unicam.cs.mpgc.rpg130957.model.potion.PotionType;
 import it.unicam.cs.mpgc.rpg130957.model.spell.Spell;
+import it.unicam.cs.mpgc.rpg130957.model.spell.SpellType;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -10,11 +11,11 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- * Rappresenta la strega, protagonista del gioco.
+ * Rappresenta la strega.
  *
  * <p>La strega possiede:</p>
  * <ul>
- *   <li>Punti vita e punti mana</li>
+ *   <li>Punti vita e mana</li>
  *   <li>Un bonus di danno base</li>
  *   <li>un inventario di pozioni</li>
  *   <li>Una lista di incantesimi conosciuti</li>
@@ -40,7 +41,6 @@ public final class Witch extends Entity {
     private int mana;
     private int powerBonus;
     private final List<Potion> inventory;
-    private final List<Spell> knownSpells;
 
     /**
      * Crea una nuova strega con salute e mana pieni.
@@ -58,7 +58,9 @@ public final class Witch extends Entity {
         this.mana = MAX_MANA;
         this.powerBonus = 0;
         this.inventory = new ArrayList<>();
-        this.knownSpells = new ArrayList<>();
+
+
+
     }
 
     @Override
@@ -193,28 +195,7 @@ public final class Witch extends Entity {
         return Collections.unmodifiableList(inventory);
     }
 
-    /**
-     * Aggiunge un incantesimo alla lista degli incantesimi conosciuti.
-     *
-     * @param spell incantesimo da aggiungere
-     * @throws NullPointerException se l'incantesimo è null
-     */
-    public void learnSpell(Spell spell) {
-        Objects.requireNonNull(spell, "L'incantesimo non può essere nullo");
-        if (!knownSpells.contains(spell)) {
-            knownSpells.add(spell);
-        }
-    }
 
-    /**
-     * Verifica se la strega conosce un determinato incantesimo.
-     *
-     * @param spell incantesimo da verificare
-     * @return true se l'incantesimo è conosciuto
-     */
-    public boolean knowsSpell(Spell spell) {
-        return knownSpells.contains(spell);
-    }
 
     /**
      * Verifica se la strega ha abbastanza mana per lanciare un incantesimo.
@@ -226,24 +207,6 @@ public final class Witch extends Entity {
         return mana >= spell.getManaCost();
     }
 
-    /**
-     * Restituisce una vista immutabile degli incantesimi conosciuti.
-     *
-     * @return lista immutabile degli incantesimi
-     */
-    public List<Spell> getKnownSpells() {
-        return Collections.unmodifiableList(knownSpells);
-    }
-
-    /**
-     * Ripristina l'inventario delle pozioni durante il caricamento di una partita.
-     *
-     * @param potions lista di pozioni da ripristinare
-     */
-    public void restoreInventory(List<Potion> potions) {
-        inventory.clear();
-        inventory.addAll(potions);
-    }
 
     /**
      * Imposta il mana della strega durante il caricamento di una partita.
@@ -279,7 +242,7 @@ public final class Witch extends Entity {
      */
     public void restoreHealth(int health) {
         if (health < 0 || health > 100) {
-            throw new IllegalArgumentException("Invalid health value: " + health);
+            throw new IllegalArgumentException("valore della salute invalido: " + health);
         }
         setHealth(health);
     }

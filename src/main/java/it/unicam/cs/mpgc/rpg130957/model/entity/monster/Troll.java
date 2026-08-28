@@ -14,8 +14,6 @@ package it.unicam.cs.mpgc.rpg130957.model.entity.monster;
 public final class Troll extends Monster {
 
     public Troll() {
-        super("Troll", 60, 10, 20,
-                "Un massiccio troll delle paludi, ricoperto di fango e alghe. " +
-                        "\nSi muove lentamente, ma i suoi colpi sono devastanti.");
+        super("Troll", 60, 10, 20);
     }
 }
