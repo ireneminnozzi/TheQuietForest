@@ -1,0 +1,222 @@
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/README.md b/README.md
+new file mode 100644
+--- /dev/null	(date 1787955700016)
++++ b/README.md	(date 1787955700016)
+@@ -0,0 +1,78 @@
++#  The Quiet Forest
++
++> *Un'avventura RPG in cui il giocatore esplora un boosco e deve sconfiggere i mostri*
++
++
++---
++
++##  Descrizione
++
++**The Quiet Forest** è un gioco RPG sviluppato in Java con JavaFX, in cui la protagonista — una giovane strega — deve esplorare un bosco misterioso e sconfiggere quattro mostri che ne minacciano l'equilibrio. Il gioco combina esplorazione, combattimenti a turni, gestione delle risorse (salute, mana, pozioni) e un sistema di salvataggio automatico.
++
++Il progetto è stato sviluppato come elaborato finale per il corso di **Metodi di Programmazione per i Giochi** presso l'Università La Sapienza di Roma, con l'obiettivo di dimostrare la padronanza di:
++- Programmazione orientata agli oggetti
++- Pattern di design (Factory, Singleton, DTO, Navigator)
++- Architettura MVC (Model-View-Controller)
++- Principi SOLID e Clean Code
++- Persistenza dei dati con JSON
++
++---
++
++##  Come Giocare
++
++### Obiettivo
++Sconfiggi tutti e 4 i mostri del bosco per riportare la pace:
++
++| # | Mostro | Location |
++|---|--------|----------|
++| 1 |  Goblin | Cascate |
++| 2 |  Troll | Palude |
++| 3 |  Spirito | Cimitero |
++| 4 |  Drago | Bosco |
++
++### Controlli
++
++**Menu Iniziale:**
++- **Nuova Partita** → Inizia una nuova avventura
++- **Carica Partita** → Riprendi un salvataggio esistente
++- **Esci** → Chiudi il gioco
++
++**Mappa del Bosco:**
++- Clicca su una location per esplorarla
++- La **Capanna** è una zona sicura dove riposare (recupera salute e mana)
++- I mostri sconfitti vengono segnati con una ✓ sulla mappa
++
++**Combattimento:**
++-  **Attacco Base** → Colpo fisico (nessun costo)
++-  **Incantesimo** → Danno magico (costa mana)
++-  **Pozione** → Cura o bonus (consuma l'oggetto)
++-  **Fuggi** → 50% di probabilità di successo
++
++### Salvataggio
++Il gioco si **salva automaticamente** dopo ogni combattimento vinto e dopo il riposo nella capanna. I progressi vengono memorizzati in un file JSON (`savegame.json`) nella root del progetto.
++
++---
++
++### Prerequisiti
++- Java 25 (LTS)
++- Gradle
++
++### Istruzioni
++
++```bash
++git clone https://github.com/ireneminnozzi/PROGETTO-MDP.git
++cd PROGETTO-MDP
++```
++
++### Build del progetto
++```bash
++./gradlew build        # Linux/Mac
++.\gradlew build        # Windows PowerShell
++```
++
++### Esecuzione
++```bash
++./gradlew run          # Linux/Mac
++.\gradlew run          # Windows PowerShell
++
++```
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"b514e8f4-e30f-4a95-99cc-b139630bd357\" name=\"Changes\" comment=\"UPDATE:&#10;aggiornate tutte le classi. progetto terminato\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExternalProjectsData\">\r\n    <projectState path=\"$PROJECT_DIR$\">\r\n      <ProjectState />\r\n    </projectState>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"FxmlFile\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;ireneminnozzi&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/ireneminnozzi/TheQuietForest.git&quot;,\r\n    &quot;accountId&quot;: &quot;96e63577-fa56-40cd-8f6d-2059c9da9cee&quot;\r\n  }\r\n}</component>\r\n  <component name=\"McpProjectServerCommands\">\r\n    <commands />\r\n    <urls />\r\n  </component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 6,\r\n  &quot;fromUser&quot;: false\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"3GxmGsZ3fReh8Eucj82Q29NsZnU\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,\r\n    &quot;Gradle.TheQuietForest [:Main.main()].executor&quot;: &quot;Run&quot;,\r\n    &quot;Gradle.TheQuietForest [:it.unicam.cs.mpgc.rpg130957.Main.main()].executor&quot;: &quot;Run&quot;,\r\n    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,\r\n    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;main&quot;,\r\n    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/irene/IdeaProjects/TheQuietForest/src/main/resources/img&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\r\n    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,\r\n    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\irene\\IdeaProjects\\TheQuietForest\\src\\main\\resources\\img\" />\r\n      <recent name=\"C:\\Users\\irene\\IdeaProjects\\TheQuietForest\\src\\main\\resources\\sound\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\irene\\IdeaProjects\\TheQuietForest\\src\\main\\resources\\sound\" />\r\n      <recent name=\"C:\\Users\\irene\\IdeaProjects\\TheQuietForest\\src\\main\\resources\\img\" />\r\n      <recent name=\"C:\\Users\\irene\\IdeaProjects\\TheQuietForest\\src\\main\\resources\\fxml\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.32098.37\" />\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.32098.37\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"b514e8f4-e30f-4a95-99cc-b139630bd357\" name=\"Changes\" comment=\"\" />\r\n      <created>1784921501840</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1784921501840</updated>\r\n      <workItem from=\"1784921505966\" duration=\"25772000\" />\r\n      <workItem from=\"1785328954375\" duration=\"16686000\" />\r\n      <workItem from=\"1785826823538\" duration=\"7274000\" />\r\n      <workItem from=\"1787337238434\" duration=\"12292000\" />\r\n      <workItem from=\"1787948200835\" duration=\"5456000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"creazione delle entità\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1785074913562</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1785074913562</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"aggiunta file necessari e aggiornamento gradle build\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1785074958225</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1785074958225</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"creazione prime pozioni\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1785074990606</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1785074990606</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"UPDATE:&#10;aggiunta prime classi Combat\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1785167915558</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1785167915558</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"workspace\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1785171760904</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1785171760904</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"UPDATE:&#10;creazione della location\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1785330362963</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1785330362964</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"UPDATE:&#10;aggiornate tutte le entità del gioco\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1785347890738</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1785347890738</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"UPDATE:&#10;aggiornate classi combat\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1785347917044</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1785347917044</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"UPDATE:&#10;aggiornate classi pozioni, incantesimi e location\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1785347954944</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1785347954944</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"UPDATE:&#10;aggiornamento classi game\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1785348099835</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1785348099835</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"UPDATE:&#10;aggiornamento classi game\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1786006912080</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1786006912080</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"UPDATE:&#10;classi game aggiornate e persistenza terminata\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1786009726019</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1786009726019</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"UPDATE:&#10;build, menu e controller terminati. &#10;inizio della grafica\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1787337972029</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1787337972029</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"UPDATE:&#10;aggiornamento degli enum\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1787340903298</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1787340903298</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"UPDATE:&#10;supporti\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1787340936303</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1787340936303</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\"UPDATE:&#10;aggiunta foto alla grafica\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1787948336485</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1787948336485</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\"UPDATE:&#10;aggiornate tutte le classi. progetto terminato\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1787951993018</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1787951993018</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"18\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"creazione delle entità\" />\r\n    <MESSAGE value=\"aggiunta file necessari e aggiornamento gradle build\" />\r\n    <MESSAGE value=\"creazione prime pozioni\" />\r\n    <MESSAGE value=\"UPDATE:&#10;aggiunta prime classi Combat\" />\r\n    <MESSAGE value=\"workspace\" />\r\n    <MESSAGE value=\"UPDATE:&#10;creazione della location\" />\r\n    <MESSAGE value=\"UPDATE:&#10;aggiornate tutte le entità del gioco\" />\r\n    <MESSAGE value=\"UPDATE:&#10;aggiornate classi combat\" />\r\n    <MESSAGE value=\"UPDATE:&#10;aggiornate classi pozioni, incantesimi e location\" />\r\n    <MESSAGE value=\"UPDATE:&#10;aggiornamento classi game\" />\r\n    <MESSAGE value=\"UPDATE:&#10;classi game aggiornate e persistenza terminata\" />\r\n    <MESSAGE value=\"UPDATE:&#10;build, menu e controller terminati. &#10;inizio della grafica\" />\r\n    <MESSAGE value=\"UPDATE:&#10;aggiornamento degli enum\" />\r\n    <MESSAGE value=\"UPDATE:&#10;supporti\" />\r\n    <MESSAGE value=\"UPDATE:&#10;aggiunta foto alla grafica\" />\r\n    <MESSAGE value=\"UPDATE:&#10;aggiornate tutte le classi. progetto terminato\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"UPDATE:&#10;aggiornate tutte le classi. progetto terminato\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 266241eff50cadef31219e0ebb46fd2289792fa9)
++++ b/.idea/workspace.xml	(date 1787955795561)
+@@ -4,8 +4,8 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="b514e8f4-e30f-4a95-99cc-b139630bd357" name="Changes" comment="UPDATE:&#10;aggiornate tutte le classi. progetto terminato">
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++    <list default="true" id="b514e8f4-e30f-4a95-99cc-b139630bd357" name="Changes" comment="UPDATE:&#10;rilevato bug nel codice, fixato">
++      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -59,36 +59,36 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
+-    &quot;Gradle.TheQuietForest [:Main.main()].executor&quot;: &quot;Run&quot;,
+-    &quot;Gradle.TheQuietForest [:it.unicam.cs.mpgc.rpg130957.Main.main()].executor&quot;: &quot;Run&quot;,
+-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/irene/IdeaProjects/TheQuietForest/src/main/resources/img&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
+-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "Gradle.Download Sources.executor": "Run",
++    "Gradle.TheQuietForest [:Main.main()].executor": "Run",
++    "Gradle.TheQuietForest [:it.unicam.cs.mpgc.rpg130957.Main.main()].executor": "Run",
++    "ModuleVcsDetector.initialDetectionPerformed": "true",
++    "RunOnceActivity.MCP Project settings loaded": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
++    "RunOnceActivity.git.unshallow": "true",
++    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
++    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
++    "git-widget-placeholder": "Merging main",
++    "junie.onboarding.icon.badge.shown": "true",
++    "kotlin-language-version-configured": "true",
++    "last_opened_file_path": "C:/Users/irene/IdeaProjects/TheQuietForest/src/main/resources/img",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "project.structure.last.edited": "Modules",
++    "project.structure.proportion": "0.15",
++    "project.structure.side.proportion": "0.2",
++    "run.code.analysis.last.selected.profile": "pProject Default",
++    "settings.editor.selected.configurable": "settings.sync",
++    "to.speed.mode.migration.done": "true",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="C:\Users\irene\IdeaProjects\TheQuietForest\src\main\resources\img" />
+@@ -119,7 +119,7 @@
+       <workItem from="1785328954375" duration="16686000" />
+       <workItem from="1785826823538" duration="7274000" />
+       <workItem from="1787337238434" duration="12292000" />
+-      <workItem from="1787948200835" duration="5456000" />
++      <workItem from="1787948200835" duration="5885000" />
+     </task>
+     <task id="LOCAL-00001" summary="creazione delle entità">
+       <option name="closed" value="true" />
+@@ -257,7 +257,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1787951993018</updated>
+     </task>
+-    <option name="localTasksCounter" value="18" />
++    <task id="LOCAL-00018" summary="UPDATE:&#10;rilevato bug nel codice, fixato">
++      <option name="closed" value="true" />
++      <created>1787955444907</created>
++      <option name="number" value="00018" />
++      <option name="presentableId" value="LOCAL-00018" />
++      <option name="project" value="LOCAL" />
++      <updated>1787955444907</updated>
++    </task>
++    <option name="localTasksCounter" value="19" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -291,6 +299,18 @@
+     <MESSAGE value="UPDATE:&#10;supporti" />
+     <MESSAGE value="UPDATE:&#10;aggiunta foto alla grafica" />
+     <MESSAGE value="UPDATE:&#10;aggiornate tutte le classi. progetto terminato" />
+-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE:&#10;aggiornate tutte le classi. progetto terminato" />
++    <MESSAGE value="UPDATE:&#10;rilevato bug nel codice, fixato" />
++    <option name="LAST_COMMIT_MESSAGE" value="UPDATE:&#10;rilevato bug nel codice, fixato" />
++  </component>
++  <component name="XDebuggerManager">
++    <breakpoint-manager>
++      <breakpoints>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/src/main/java/it/unicam/cs/mpgc/rpg130957/model/entity/monster/Goblin.java</url>
++          <line>17</line>
++          <option name="timeStamp" value="1" />
++        </line-breakpoint>
++      </breakpoints>
++    </breakpoint-manager>
+   </component>
+ </project>
+\ No newline at end of file

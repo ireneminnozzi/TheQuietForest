@@ -15,6 +15,6 @@ package it.unicam.cs.mpgc.rpg130957.model.entity.monster;
 public final class Goblin extends Monster {
 
     public Goblin() {
-        super("Goblin", 30, 1, 5)
+        super("Goblin", 30, 1 , 5)
 ;                }
 }
