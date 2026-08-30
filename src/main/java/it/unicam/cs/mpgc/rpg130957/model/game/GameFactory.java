@@ -21,8 +21,6 @@ import java.util.List;
  */
 public class GameFactory {
 
-    private static final int INITIAL_PLAYER_HEALTH = 100;
-
     /**
      * Crea una nuova partita con seed casuale (timestamp).
      *
@@ -66,13 +64,6 @@ public class GameFactory {
         engine.restoreGameState(GameState.valueOf(data.getGameState()));
 
         return engine;
-    }
-
-
-
-    private GameEngine buildEngine(GameRandom random, Witch witch, ForestMap map, PotionFactory potionFactory) {
-        CombatSystem combatSystem = new CombatSystem(random);
-        return new GameEngine(witch, map, combatSystem, potionFactory, random);
     }
 
     private Witch restoreWitch(SaveData data) {

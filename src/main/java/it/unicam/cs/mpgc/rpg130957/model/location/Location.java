@@ -27,9 +27,6 @@ public class Location {
         this.monsterDefeated = false;
     }
 
-    public LocationType getType() {
-        return type;
-    }
 
     public Monster getMonster() {
         return monster;
@@ -56,12 +53,4 @@ public class Location {
         this.monsterDefeated = true;
     }
 
-    /**
-     * Ripristina lo stato della location (utile per il caricamento di una partita salvata).
-     *
-     * @param defeated stato del mostro
-     */
-    public void restoreDefeatedState(boolean defeated) {
-        this.monsterDefeated = defeated;
-    }
 }

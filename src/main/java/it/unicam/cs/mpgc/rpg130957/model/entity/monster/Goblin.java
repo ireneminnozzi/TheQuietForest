@@ -9,7 +9,7 @@ package it.unicam.cs.mpgc.rpg130957.model.entity.monster;
  *
  * <ul>
  *   <li>HP: 30</li>
- *   <li>Danno: 5-10</li>
+ *   <li>Danno: 1-5</li>
  * </ul>
  */
 public final class Goblin extends Monster {

@@ -1,6 +1,5 @@
 package it.unicam.cs.mpgc.rpg130957.model.combat;
 
-import it.unicam.cs.mpgc.rpg130957.model.entity.Entity;
 import it.unicam.cs.mpgc.rpg130957.model.entity.Witch;
 import it.unicam.cs.mpgc.rpg130957.model.entity.monster.Monster;
 import it.unicam.cs.mpgc.rpg130957.model.potion.Potion;
@@ -139,12 +138,6 @@ public final class CombatSession {
             case MANA   -> witch.recoverMana(potion.getType().getManaRestore());
             case POWER  -> witch.increasePower(potion.getType().getPowerBonus());
         }
-    }
-    private String processMonsterAttack() {
-        int damage = combatSystem.calculateDamage(monster);
-        witch.takeDamage(damage);
-        history.add(new CombatEntry(monster.getDisplayName() + " attacca", damage));
-        return monster.getDisplayName() + " contrattacca infliggendo " + damage + " danni!";
     }
 
     /**
